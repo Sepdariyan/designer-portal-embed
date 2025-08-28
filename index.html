@@ -4,63 +4,327 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Designer Rules Portal — Embed</title>
-  <meta name="description" content="Preview portal rules untuk di-embed ke Notion" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .line-clamp-1{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
+  <!-- Header -->
   <header class="sticky top-0 z-30 border-b bg-white/80 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
       <div class="flex items-center gap-2 font-semibold">
         <span class="text-teal-600">✦</span>
         <span>Designer Rules Portal</span>
       </div>
+      <div class="ml-auto flex w-full max-w-md items-center gap-2">
+        <div class="relative w-full">
+          <input id="searchBox" class="w-full rounded-lg border border-slate-300 bg-white/70 px-9 py-2 text-sm outline-none focus:ring-2 focus:ring-teal-400" placeholder="Cari rule, topics, stage…" />
+          <span class="pointer-events-none absolute left-3 top-2.5 text-slate-400">🔎</span>
+        </div>
+      </div>
     </div>
   </header>
 
+  <!-- Announcement strip -->
+  <div class="border-b bg-amber-50/70 text-amber-900">
+    <div class="mx-auto flex max-w-6xl items-center gap-6 px-4 py-2 text-sm">
+      <div class="flex items-center gap-2 font-medium">🔔 Production Updates</div>
+      <div class="flex flex-1 items-center gap-6 overflow-auto whitespace-nowrap">
+        <div class="flex items-center gap-2"><span class="rounded-full bg-amber-500/20 px-2 text-[11px]">High</span><span>Rigid Box A—B produksi minggu ini</span></div>
+        <div class="flex items-center gap-2"><span class="rounded-full bg-amber-500/20 px-2 text-[11px]">Medium</span><span>Vendor board cut-off Jumat 17:00</span></div>
+        <div class="flex items-center gap-2"><span class="rounded-full bg-amber-500/20 px-2 text-[11px]">Low</span><span>Template dieline v2.3 rilis</span></div>
+      </div>
+    </div>
+  </div>
+
   <main class="mx-auto max-w-6xl space-y-10 px-4 py-6">
+    <!-- Featured -->
     <section>
-      <h2 class="mb-3 text-xl font-semibold">Featured</h2>
+      <div class="mb-3 flex items-center justify-between">
+        <h2 class="text-xl font-semibold">Featured</h2>
+        <a class="text-sm text-teal-600 hover:underline" href="#">Lihat semua →</a>
+      </div>
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
         <div class="md:col-span-2">
           <article class="overflow-hidden rounded-xl border bg-white shadow-sm transition hover:shadow-lg">
             <div class="relative aspect-[16/9] bg-gradient-to-br from-slate-800 to-slate-600">
+              <div class="absolute left-3 top-3 rounded-full bg-rose-600 px-2 py-0.5 text-[10px] text-white">P1</div>
               <div class="absolute bottom-3 left-3 text-xs text-white/80">cover preview</div>
             </div>
             <div class="p-3">
               <h3 class="line-clamp-2 font-semibold">Rigid Box — Panel B &amp; D +3 mm (W side)</h3>
-              <div class="mt-2 text-xs text-slate-500">Rigid Box • Prepress • ⏱ 6 min</div>
+              <div class="mt-2 flex flex-wrap gap-1.5 text-xs">
+                <span class="rounded-full border border-slate-200 bg-white/60 px-2 py-0.5">Rigid Box</span>
+                <span class="rounded-full border border-slate-200 bg-white/60 px-2 py-0.5">Prepress</span>
+                <span class="rounded-full border border-slate-200 bg-white/60 px-2 py-0.5">NEW</span>
+                <span class="ml-2 text-slate-500">⏱ 6 min</span>
+              </div>
             </div>
           </article>
         </div>
         <div class="grid grid-cols-1 gap-4">
           <article class="overflow-hidden rounded-xl border bg-white shadow-sm transition hover:shadow-lg">
-            <div class="relative aspect-[4/3] bg-gradient-to-br from-slate-800 to-slate-600"></div>
+            <div class="relative aspect-[4/3] bg-gradient-to-br from-slate-800 to-slate-600">
+              <div class="absolute left-3 top-3 rounded-full bg-slate-200 px-2 py-0.5 text-[10px]">P2</div>
+            </div>
             <div class="p-3">
               <h3 class="line-clamp-2 font-semibold">Export Vendor — PDF/AI/PNG checklist</h3>
-              <div class="mt-2 text-xs text-slate-500">Handover • Checklist • ⏱ 4 min</div>
+              <div class="mt-2 flex flex-wrap gap-1.5 text-xs">
+                <span class="rounded-full border border-slate-200 bg-white/60 px-2 py-0.5">Handover</span>
+                <span class="rounded-full border border-slate-200 bg-white/60 px-2 py-0.5">Checklist</span>
+                <span class="ml-2 text-slate-500">⏱ 4 min</span>
+              </div>
             </div>
           </article>
           <article class="overflow-hidden rounded-xl border bg-white shadow-sm transition hover:shadow-lg">
             <div class="relative aspect-[4/3] bg-gradient-to-br from-slate-800 to-slate-600"></div>
             <div class="p-3">
               <h3 class="line-clamp-2 font-semibold">Color Swatch — Digital Press standard</h3>
-              <div class="mt-2 text-xs text-slate-500">Color • QA • ⏱ 5 min</div>
+              <div class="mt-2 flex flex-wrap gap-1.5 text-xs">
+                <span class="rounded-full border border-slate-200 bg-white/60 px-2 py-0.5">Color</span>
+                <span class="rounded-full border border-slate-200 bg-white/60 px-2 py-0.5">QA</span>
+                <span class="ml-2 text-slate-500">⏱ 5 min</span>
+              </div>
             </div>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- Latest -->
+    <section>
+      <div class="mb-3 flex items-center justify-between">
+        <h2 class="text-xl font-semibold">Latest</h2>
+      </div>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <template id="latest-template">
+          <article class="overflow-hidden rounded-xl border bg-white shadow-sm transition hover:shadow-lg">
+            <div class="relative aspect-[4/3] bg-gradient-to-br from-slate-800 to-slate-600"></div>
+            <div class="p-3">
+              <h3 class="line-clamp-2 font-semibold"></h3>
+              <div class="mt-2 flex flex-wrap gap-1.5 text-xs">
+                <span class="chip rounded-full border border-slate-200 bg-white/60 px-2 py-0.5"></span>
+                <span class="chip rounded-full border border-slate-200 bg-white/60 px-2 py-0.5"></span>
+                <span class="ml-2 text-slate-500">⏱ <span class="minutes">5</span> min</span>
+              </div>
+            </div>
+          </article>
+        </template>
+        <div id="latest-grid" class="contents"></div>
+      </div>
+    </section>
+
+    <!-- Trending -->
+    <section>
+      <div class="mb-3 flex items-center justify-between">
+        <h2 class="text-xl font-semibold">🔥 Trending</h2>
+      </div>
+      <div id="trending-grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+    </section>
+
+    <!-- Topics -->
+    <section>
+      <div class="mb-3 flex items-center justify-between">
+        <h2 class="text-xl font-semibold">Topics</h2>
+      </div>
+      <div id="topics-grid" class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"></div>
+    </section>
   </main>
 
   <footer class="border-t bg-white/60 py-8">
-    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-500">© <span id="year"></span> Studio</div>
+    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-500">
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div>© <span id="year"></span> Studio</div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Tentang</a>
+          <a href="#" class="hover:underline">Panduan Style</a>
+          <a href="#" class="hover:underline">Hubungi</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- Chatbot floating button -->
+  <button id="chatToggle" aria-label="Tanya Aturan" class="fixed bottom-5 right-5 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full bg-teal-600 text-white shadow-lg transition hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400">💬</button>
+
+  <!-- Chat panel -->
+  <div id="chatPanel" class="fixed bottom-20 right-5 z-40 hidden w-[380px] max-w-[92vw] overflow-hidden rounded-2xl border bg-white shadow-2xl">
+    <div class="flex items-center gap-2 border-b bg-slate-50 px-3 py-2">
+      <div class="flex h-8 w-8 items-center justify-center rounded-full bg-teal-600 text-white">🤖</div>
+      <div class="flex-1">
+        <div class="text-sm font-semibold">Tanya Aturan</div>
+        <div class="text-xs text-slate-500">Jawaban berdasarkan konten portal</div>
+      </div>
+      <button id="chatClose" class="rounded p-1 hover:bg-slate-100">✕</button>
+    </div>
+    <div id="chatList" class="max-h-[45vh] space-y-3 overflow-auto px-3 py-3 text-sm"></div>
+    <div class="border-t p-2">
+      <div class="flex items-center gap-2">
+        <input id="chatInput" class="w-full rounded-lg border border-slate-300 bg-white/70 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-teal-400" placeholder="Tulis pertanyaan… (Enter untuk kirim)" />
+        <button id="chatSend" class="inline-flex items-center justify-center rounded-lg bg-teal-600 px-3 py-2 text-white">Kirim</button>
+      </div>
+      <div class="mt-1 text-[11px] text-slate-500">Bot akan menautkan halaman terkait jika ada.</div>
+    </div>
+  </div>
+
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Sample data (samakan dengan konten Notion Anda untuk konsistensi judul/tautan)
+    const latest = [
+      { title: 'Knife line spec — stroke 1 pt, no dashed', topics: ['Prepress'], minutes: 4, url: '#knife-line' },
+      { title: 'Gap guiding 3 cm — layout guidance', topics: ['Rigid Box'], minutes: 6, url: '#gap-guiding' },
+      { title: 'Overhang lid +5 mm — validation', topics: ['Rigid Box','QA'], minutes: 3, url: '#overhang' },
+      { title: 'Vendor package — file naming', topics: ['Handover'], minutes: 4, url: '#file-naming' },
+      { title: 'Label format — bleed & safe area', topics: ['Label'], minutes: 5, url: '#label-bleed' },
+      { title: 'Template linking — dielines DB', topics: ['Templates'], minutes: 4, url: '#dielines' },
+    ];
+
+    const trending = [
+      'Rigid Box tolerance — board & cover',
+      'CMYK vs Spot — packaging rule',
+      'Preflight — anchor break & overlaps',
+      'QR placement — branding rules',
+      'A5 checklist — form export',
+      'Plano board 65×77 — paneling',
+      'Dieline preview — scale & pad',
+      'Vendor proof — approval gate',
+    ];
+
+    const topics = [
+      { name: 'Rigid Box', items: ['Panel B & D +3 mm', 'Overhang lid +5 mm', 'Plano board 65×77'] },
+      { name: 'Prepress', items: ['Knife line 1 pt', 'No dashed lines', 'Anchor break'] },
+      { name: 'Design', items: ['Color swatch', 'QR placement', 'Brand spacing'] },
+      { name: 'QA', items: ['Checklist handover', 'Export preflight'] },
+    ];
+
+    // Render Latest
+    const latestGrid = document.getElementById('latest-grid');
+    const tmpl = document.getElementById('latest-template');
+    latest.forEach(item => {
+      const node = tmpl.content.cloneNode(true);
+      node.querySelector('h3').textContent = item.title;
+      const chips = node.querySelectorAll('.chip');
+      chips[0].textContent = item.topics[0] || '';
+      chips[1].textContent = item.topics[1] || '';
+      node.querySelector('.minutes').textContent = item.minutes;
+      latestGrid.appendChild(node);
+    });
+
+    // Render Trending
+    const trendingGrid = document.getElementById('trending-grid');
+    trending.forEach((t, i) => {
+      const el = document.createElement('article');
+      el.className = 'overflow-hidden rounded-xl border bg-white shadow-sm transition hover:shadow-lg';
+      el.innerHTML = `
+        <div class="relative aspect-[4/3] bg-gradient-to-br from-slate-800 to-slate-600"></div>
+        <div class="p-3">
+          <h3 class="line-clamp-2 font-semibold">${t}</h3>
+          <div class="mt-2 flex flex-wrap items-center gap-1.5 text-xs">
+            <span class="rounded-full border border-slate-200 bg-white/60 px-2 py-0.5">Popular</span>
+            <span class="ml-2 text-slate-500">⏱ ${4 + (i % 3)} min</span>
+          </div>
+        </div>`;
+      trendingGrid.appendChild(el);
+    });
+
+    // Render Topics
+    const topicsGrid = document.getElementById('topics-grid');
+    topics.forEach(col => {
+      const box = document.createElement('div');
+      box.className = 'rounded-2xl border bg-white/60 p-4';
+      const head = document.createElement('div');
+      head.className = 'mb-3 flex items-center justify-between';
+      head.innerHTML = `<h3 class="font-semibold">${col.name}</h3><a href="#" class="text-sm text-teal-600 hover:underline">Lihat semua</a>`;
+      box.appendChild(head);
+      const list = document.createElement('div');
+      list.className = 'space-y-3';
+      col.items.forEach(it => {
+        const row = document.createElement('div');
+        row.className = 'group flex items-start gap-3 rounded-xl border p-3 hover:border-teal-300';
+        row.innerHTML = `<div class="mt-1 h-8 w-8 shrink-0 rounded bg-slate-200"></div>
+                         <div class="flex-1">
+                           <div class="line-clamp-2 text-sm font-medium group-hover:text-teal-700">${it}</div>
+                           <div class="mt-1 text-xs text-slate-500">Rigid • 4 min</div>
+                         </div>`;
+        list.appendChild(row);
+      });
+      box.appendChild(list);
+      topicsGrid.appendChild(box);
+    });
+
+    // --- Chatbot ---
+    const kb = [
+      { title: 'Rigid Box — Panel B & D +3 mm (W side)', url: '#rigid-panel-bd', summary: 'Panel B & D tambah +3 mm di sisi W.' },
+      ...latest.map(x => ({ title: x.title, url: x.url, summary: (x.topics || []).join(' ') })) ,
+      ...trending.map(t => ({ title: t, url: '#', summary: 'Popular' })),
+    ];
+
+    const chatToggle = document.getElementById('chatToggle');
+    const chatPanel = document.getElementById('chatPanel');
+    const chatClose = document.getElementById('chatClose');
+    const chatList = document.getElementById('chatList');
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+
+    function addMsg(role, html){
+      const wrap = document.createElement('div');
+      wrap.className = 'flex items-start gap-2 ' + (role==='user' ? 'justify-end' : '');
+      const avatar = document.createElement('div');
+      avatar.className = 'mt-1 flex h-6 w-6 items-center justify-center rounded-full ' + (role==='user' ? 'bg-slate-200 text-slate-700' : 'bg-teal-600 text-white');
+      avatar.textContent = role==='user' ? '👤' : '🤖';
+      const bubble = document.createElement('div');
+      bubble.className = 'max-w-[80%] rounded-2xl px-3 py-2 text-sm leading-relaxed ' + (role==='user' ? 'bg-teal-600 text-white' : 'bg-slate-100 text-slate-800');
+      bubble.innerHTML = html;
+      if(role==='user'){ wrap.appendChild(bubble); wrap.appendChild(avatar); }
+      else { wrap.appendChild(avatar); wrap.appendChild(bubble); }
+      chatList.appendChild(wrap);
+      chatList.scrollTo({ top: chatList.scrollHeight, behavior: 'smooth' });
+    }
+
+    function retrieveAnswer(q){
+      const query = q.toLowerCase();
+      const terms = query.split(/\s+/).filter(Boolean);
+      const scored = kb.map(doc => {
+        const hay = (doc.title + ' ' + doc.summary).toLowerCase();
+        let score = 0; terms.forEach(t => { if(hay.includes(t)) score++; });
+        if(hay.includes(query)) score += 2;
+        return {doc, score};
+      }).filter(x => x.score>0).sort((a,b)=>b.score-a.score).slice(0,3);
+      if(!scored.length){
+        return 'Maaf, belum ketemu. Coba kata kunci: <b>"stroke 1 pt"</b>, <b>"overhang +5 mm"</b>, <b>"export vendor"</b>.';
+      }
+      const bullets = scored.map(x => `• ${x.doc.title} — <a class="underline text-teal-700" target="_blank" href="${x.doc.url}">Lihat</a>`).join('<br>');
+      return 'Berikut yang paling relevan:<br>' + bullets + '<br><br><span class="text-slate-500">Catatan: ini demo pencarian lokal. Buka halaman aturan untuk detail.</span>';
+    }
+
+    function send(){
+      const q = chatInput.value.trim();
+      if(!q) return;
+      addMsg('user', q);
+      chatInput.value = '';
+      setTimeout(()=>{
+        const ans = retrieveAnswer(q);
+        addMsg('assistant', ans);
+      }, 300);
+    }
+
+    chatToggle.addEventListener('click', ()=> chatPanel.classList.toggle('hidden'));
+    chatClose.addEventListener('click', ()=> chatPanel.classList.add('hidden'));
+    chatSend.addEventListener('click', send);
+    chatInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); send(); }});
+
+    // Simple search highlight (demo only)
+    document.getElementById('searchBox').addEventListener('keydown', e=>{
+      if(e.key==='Enter'){
+        const q = e.target.value.trim();
+        if(q){ chatPanel.classList.remove('hidden'); addMsg('assistant', 'Anda mencari: <b>'+q+'</b>. Klik tombol Kirim untuk bertanya.'); }
+      }
+    });
   </script>
 </body>
 </html>
+
