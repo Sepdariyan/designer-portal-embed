@@ -5,9 +5,10 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors https://*.notion.so https://*.notion.site https://www.notion.so;"
+          "value": "frame-ancestors https://*.notion.so https://*.notion.site https://www.notion.so https://apption.co https://*.apption.co;"
         }
       ]
     }
   ]
 }
+
